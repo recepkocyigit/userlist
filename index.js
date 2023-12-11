@@ -21,7 +21,7 @@ app.get("/users", async (req, res) => {
         const result = await request.query(sorgu)
         const sonuc = JSON.stringify(result.recordset)
 
-        fs.writeFile("users.json", sonuc, (err) => {
+        fs.writeFile(__dirname + "/kullanicilar/users.json", sonuc, (err) => {
             if (err) {
                 console.log(err);
             } else {
