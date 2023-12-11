@@ -1,0 +1,11 @@
+{
+    "user": "test",
+    "password": "test1234",
+    "server": "RECEP\\RECEPEXPRESS",
+    "driver": "msnodesqlv8",
+    "database": "AYEFATURA",
+    "options": {
+        "encrypt": true,
+        "trustServerCertificate": true
+    }
+}
