@@ -16,7 +16,7 @@ app.get("/users", async (req, res) => {
     try {
         const pool = await new ConnectionPool(config).connect()
         const request = pool.request()
-        const sorgu = "SELECT ef_title, ef_identifier FROM dbt_efatura_userlist"
+        const sorgu = "SELECT ef_title, ef_identifier FROM dbt_efatura_userlist where ef_doctype = '01'"
 
         const result = await request.query(sorgu)
         const sonuc = JSON.stringify(result.recordset)
